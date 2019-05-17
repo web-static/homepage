@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/ionicons.css">
     <link rel="stylesheet" href="css/now-ui-kit.css">
     <link rel="stylesheet" href="css/app.css">
-    
+
     <!-- ==== js ==== -->
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.min.js"></script>
@@ -25,7 +25,7 @@
 </head>
 
 <body>
-    <!--=== navbar ===-->
+    <!--=== 导航栏 ===-->
     <header class="header">
         <nav class="navbar navbar-expand-sm">
             <div class="container">
@@ -41,10 +41,16 @@
                      data-nav-image="assets/img/blurred-image-1.jpg">
                     <ul class="navbar-nav">
                         <li class="nav-item active dropdown">
-                            <a target="_blank" class="nav-link" href="/">Home</a>
+                            <a class="nav-link" href="/">主页</a>
                         </li>
                         <li class="nav-item">
-                            <a target="_blank" class="nav-link" href="/unvisible.html">Blog</a>
+                            <a class="nav-link" href="#proj">项目</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#blog">文章</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#cont">联系</a>
                         </li>
                         <li class="nav-item">
                             <a target="_blank" class="nav-link" href="/unvisible.html">Download</a>
@@ -55,7 +61,7 @@
         </nav>
     </header>
 
-    <!--=== home ===-->
+    <!--=== 顶部 ===-->
     <section id="home" class="header-intro-1 d-flex align-items-center">
         <div class="container-fluid">
             <div class="row">
@@ -72,8 +78,8 @@
         </div>
     </section>
 
-    <!--=== Products ===-->
-    <section class="products">
+    <!--=== 代码项目 ===-->
+    <section id="proj" class="products">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -134,8 +140,100 @@
         </div>
     </section>
 
-    <!--=== list feature ===-->
-    <section class="feature list-feature">
+    <!--=== blog page ===-->
+    <section id="blog" class="blog-posts">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="section-header">
+                                <div class="sec-icon"><i class="ion ion-android-list"></i></div>
+                                <div class="sec-title">Weekly Blog Post</div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-6">
+                            <div class="blog-post">
+                                <div class="post-img">
+                                    <img class="img-fluid" src="images/blogs/covers/3.jpg" alt="image">
+                                </div>
+                                <div class="blog-details">
+                                    <a target="_blank"
+                                       href="https://mp.weixin.qq.com/s?__biz=MzU0NjQzNDAwNA==&mid=2247483789&idx=1&sn=c7f45547f9eee46378cec197564163ee&chksm=fb5cff36cc2b7620522f28763ced854fa7c3b1cbe1694dcd76567ff5a8db36fb21b350322603#rd">
+                                        <h4 class="media-heading">这个人想盗我号！</h4>
+                                    </a>
+                                    <p>神秘邮件蕴藏陷阱，真真假假难分难辩；<br />
+                                        黑色产业猖狂发展，不法分子逍遥法外；<br />
+                                        监管部门束手无策，网络安全形势严峻</p>
+                                    <a target="_blank"
+                                       href="https://mp.weixin.qq.com/s?__biz=MzU0NjQzNDAwNA==&mid=2247483789&idx=1&sn=c7f45547f9eee46378cec197564163ee&chksm=fb5cff36cc2b7620522f28763ced854fa7c3b1cbe1694dcd76567ff5a8db36fb21b350322603#rd"
+                                       class="blog-post-link">Read More <i class="fa fa-angle-double-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-6">
+                            <div class="blog-post">
+                                <div class="post-img">
+                                    <img class="img-fluid" src="images/blogs/covers/2.jpg" alt="image">
+                                </div>
+                                <div class="blog-details">
+                                    <a target="_blank"
+                                       href="https://mp.weixin.qq.com/s?__biz=MzU0NjQzNDAwNA==&mid=2247483770&idx=1&sn=07502d8306e0d3af460287fb3ed61da1&chksm=fb5cffc1cc2b76d70ab3f39e75cc0dc73345911b41b69e13e97b1b6e5f163f78f35cc70f3cac&token=918024724&lang=zh_CN#rd">
+                                        <h4 class="media-heading">【汇总】唱出对祖国的热爱，和全国人民一起#比心中国#</h4>
+                                    </a>
+                                    <p>新的一年将至，全国上下掀起了形形色色的“快闪”热潮，以此表达对祖国的热爱以及对来年的美好祝福。</p>
+                                    <a target="_blank"
+                                       href="https://mp.weixin.qq.com/s?__biz=MzU0NjQzNDAwNA==&mid=2247483770&idx=1&sn=07502d8306e0d3af460287fb3ed61da1&chksm=fb5cffc1cc2b76d70ab3f39e75cc0dc73345911b41b69e13e97b1b6e5f163f78f35cc70f3cac&token=918024724&lang=zh_CN#rd"
+                                       class="blog-post-link">Read More <i class="fa fa-angle-double-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-6">
+                            <div class="blog-post">
+                                <div class="post-img">
+                                    <img class="img-fluid" src="images/blogs/covers/1.jpg" alt="image">
+                                </div>
+                                <div class="blog-details">
+                                    <a target="_blank"
+                                       href="https://mp.weixin.qq.com/s?__biz=MzU0NjQzNDAwNA==&mid=2247483751&idx=1&sn=fa2ba0354331443aaf368d030a329e5a&chksm=fb5cffdccc2b76ca859c0bf67d3ffbb0b4d4d46379791816641ef8d499e33ab1e9896e45f345#rd">
+                                        <h4 class="media-heading">《零的执行人》引起对网络安全的思考.</h4>
+                                    </a>
+                                    <p>网络上'暗'流涌动，Iot设备安全性备受质疑</p>
+                                    <a target="_blank"
+                                       href="https://mp.weixin.qq.com/s?__biz=MzU0NjQzNDAwNA==&mid=2247483751&idx=1&sn=fa2ba0354331443aaf368d030a329e5a&chksm=fb5cffdccc2b76ca859c0bf67d3ffbb0b4d4d46379791816641ef8d499e33ab1e9896e45f345#rd"
+                                       class="blog-post-link">Read More <i class="fa fa-angle-double-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-6">
+                            <div class="blog-post">
+                                <div class="post-img">
+                                    <img class="img-fluid" src="images/blogs/covers/0.jpg" alt="image">
+                                </div>
+                                <div class="blog-details">
+                                    <a target="_blank"
+                                       href="https://mp.weixin.qq.com/s?__biz=MzU0NjQzNDAwNA==&mid=2247483670&idx=1&sn=ca6187ed28653492ce71c8c55a5af59c&chksm=fb5cffadcc2b76bbb71c288921b07cc1fec505f17d18c28fcf1044c0a19a357e6c76870951bb#rd">
+                                        <h4 class="media-heading">今日•立冬</h4>
+                                    </a>
+                                    <p>今天立冬啦！小朋友们还不快来北师大看落叶🍂！</p>
+                                    <a target="_blank"
+                                       href="https://mp.weixin.qq.com/s?__biz=MzU0NjQzNDAwNA==&mid=2247483670&idx=1&sn=ca6187ed28653492ce71c8c55a5af59c&chksm=fb5cffadcc2b76bbb71c288921b07cc1fec505f17d18c28fcf1044c0a19a357e6c76870951bb#rd"
+                                       class="blog-post-link">Read More <i class="fa fa-angle-double-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--<div class="col-12">
+                            <div class="see-more"><a href="#" class="btn btn-primary main-btn bg-main">View All Post</a>
+                            </div>
+                        </div>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--=== 联系方式 ===-->
+    <section id="cont" class="feature list-feature">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -260,36 +358,25 @@
             </div>
         </div>
     </section>
-    
-    
-<!--=== 搜索引擎模块 ===-->
-    
+
+    <!--=== 搜索引擎模块 ===-->
     <!--=== 360 ===-->
     <script>
-(function(){
-var src = (document.location.protocol == "http:") ? "http://js.passport.qihucdn.com/11.0.1.js?52bf94588d5c24eeb3a1f6594069b8c9":"https://jspassport.ssl.qhimg.com/11.0.1.js?52bf94588d5c24eeb3a1f6594069b8c9";
-document.write('<script src="' + src + '" id="sozz"><\/script>');
-})();
-</script>
-    
+        (function () {
+            var src = "https://jspassport.ssl.qhimg.com/11.0.1.js?52bf94588d5c24eeb3a1f6594069b8c9";
+            document.write('<script src="' + src + '" id="sozz"><\/script>');
+        })();
+    </script>
+
     <!--=== 百度搜索 ===-->
     <script>
-(function(){
-    var bp = document.createElement('script');
-    var curProtocol = window.location.protocol.split(':')[0];
-    if (curProtocol === 'https') {
-        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
-    }
-    else {
-        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-    }
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(bp, s);
-})();
-</script>
-
-    
-    
+        (function () {
+            var bp = document.createElement('script');
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(bp, s);
+        })();
+    </script>
 </body>
 
 </html>
