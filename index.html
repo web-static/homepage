@@ -12,14 +12,13 @@
     <link rel="preload" as="style" href="css/ionicons.css">
     <link rel="preload" as="style" href="css/now-ui-kit.css">
     <link rel="preload" as="style" href="css/app.css">
-    <link rel="preload" as="style" href="css/app.css">
     <link rel="preload" as="script" href="js/jquery.min.js">
     <link rel="preload" as="script" href="js/popper.min.js">
     <link rel="preload" as="script" href="bootstrap/js/bootstrap.min.js">
     <link rel="preload" as="script" href="js/app.js">
     <link rel="preload" as="script" href="js/push/360.js">
     <link rel="preload" as="script" href="js/push/baidu.js">
-    
+
     <link rel="preload" as="image" href="images/Proj-1.png">
     <link rel="preload" as="image" href="images/proj-2.png">
     <link rel="preload" as="image" href="images/proj-3.png">
@@ -28,7 +27,7 @@
     <link rel="preload" as="image" href="images/blogs/covers/2.jpg">
     <link rel="preload" as="image" href="images/blogs/covers/1.jpg">
     <link rel="preload" as="image" href="images/blogs/covers/0.jpg">
-    
+
     <!-- === CSS === -->
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/ionicons.css">
@@ -40,15 +39,18 @@
     <script src="js/popper.min.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <script src="js/app.js"></script>
+
+    <!--    
     <script src="js/push/360.js" id="sozz"></script>
     <script src="js/push/baidu.js"></script>
+    -->
 
     <!-- ==== icon ==== -->
     <link rel="shortcut icon" href="/images/favicon/favicon256.ico" type="image/x-icon">
     <link rel="icon" sizes="any" mask="" href="/images/favicon/favicon.svg">
 </head>
 
-<body>
+<body onload="init_elements()">
     <!--=== 导航栏 ===-->
     <header class="header">
         <nav class="navbar navbar-expand-sm">
@@ -63,21 +65,10 @@
                 </button>
                 <div class="collapse navbar-collapse" id="example-navbar"
                      data-nav-image="assets/img/blurred-image-1.jpg">
-                    <ul class="navbar-nav">
+                    <ul class="navbar-nav" id="navi_list">
+                        <!--以下内容由 Ajax 动态加载-->
                         <li class="nav-item active dropdown">
-                            <a class="nav-link" href="/">主页</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#proj">项目</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#blog">文章</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#cont">联系</a>
-                        </li>
-                        <li class="nav-item">
-                            <a target="_blank" class="nav-link" href="/unvisible.html">Download</a>
+                            <a class="nav-link" href="#">加载中</a>
                         </li>
                     </ul>
                 </div>
@@ -105,50 +96,19 @@
     <!--=== 代码项目 ===-->
     <section id="proj" class="products">
         <div class="container">
-            <div class="row">
+            <div class="row" id="proj_list">
                 <div class="col-12">
                     <div class="section-header">
                         <div class="sec-icon"><i class="ion ion-android-list"></i></div>
                         <div class="sec-title">Projects</div>
                     </div>
                 </div>
+
+                <!--以下内容由 Ajax 动态加载-->
                 <div class="col-lg-4 col-md-4 col-sm-6">
                     <div class="product-wrap">
                         <div class="img-wrap">
-                            <img src="images/Proj-1.png" alt="Product Item" />
-                            <div class="product-overlay">
-                                <a target="_blank" href="https://github.com/JingYang1999/Gobang-python3/"
-                                   class="icon-wrap"><i class="ion ion-android-arrow-forward"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-6">
-                    <div class="product-wrap">
-                        <div class="img-wrap">
-                            <img src="images/proj-2.png" alt="Product Item" />
-                            <div class="product-overlay">
-                                <a target="_blank" href="https://github.com/JingYang1999/Sudoku/" class="icon-wrap"><i
-                                       class="ion ion-android-arrow-forward"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-6">
-                    <div class="product-wrap">
-                        <div class="img-wrap">
-                            <img src="images/proj-3.png" alt="Product Item" />
-                            <div class="product-overlay">
-                                <a target="_blank" href="https://github.com/JingYang1999/Gobang-cpp/"
-                                   class="icon-wrap"><i class="ion ion-android-arrow-forward"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-6">
-                    <div class="product-wrap">
-                        <div class="img-wrap">
-                            <img src="images/Next.png" alt="Product Item" />
+                            <img src="images/Next.png" alt="加载中" />
                             <div class="product-overlay">
                                 <a target="_blank" href="" class="icon-wrap"><i
                                        class="ion ion-android-arrow-forward"></i></a>
@@ -156,6 +116,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="col-12">
                     <div class="see-more"><a target="_blank" href="#" class="btn btn-primary main-btn bg-main">View
                             More</a></div>
@@ -169,87 +130,35 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <div class="row">
+                    <div class="row" id="blog_list">
                         <div class="col-12">
                             <div class="section-header">
                                 <div class="sec-icon"><i class="ion ion-android-list"></i></div>
                                 <div class="sec-title">Recent Blog Post</div>
                             </div>
                         </div>
+
+                        <!--以下内容由 Ajax 动态加载-->
                         <div class="col-lg-4 col-md-6 col-sm-6">
                             <div class="blog-post">
                                 <div class="post-img">
-                                    <img class="img-fluid" src="images/blogs/covers/3.jpg" alt="image">
+                                    <img class="img-fluid" src="images/Next.png" alt="image">
                                 </div>
                                 <div class="blog-details">
-                                    <a target="_blank"
-                                       href="https://mp.weixin.qq.com/s?__biz=MzU0NjQzNDAwNA==&mid=2247483789&idx=1&sn=c7f45547f9eee46378cec197564163ee&chksm=fb5cff36cc2b7620522f28763ced854fa7c3b1cbe1694dcd76567ff5a8db36fb21b350322603#rd">
-                                        <h4 class="media-heading">这个人想盗我号！</h4>
+                                    <a target="_blank" href="">
+                                        <h4 class="media-heading">加载中</h4>
                                     </a>
-                                    <p>神秘邮件蕴藏陷阱，真真假假难分难辩；<br />
-                                        黑色产业猖狂发展，不法分子逍遥法外；<br />
-                                        监管部门束手无策，网络安全形势严峻</p>
-                                    <a target="_blank"
-                                       href="https://mp.weixin.qq.com/s?__biz=MzU0NjQzNDAwNA==&mid=2247483789&idx=1&sn=c7f45547f9eee46378cec197564163ee&chksm=fb5cff36cc2b7620522f28763ced854fa7c3b1cbe1694dcd76567ff5a8db36fb21b350322603#rd"
-                                       class="blog-post-link">Read More <i class="fa fa-angle-double-right"></i></a>
+                                    <p>加载中</p>
+                                    <a target="_blank" href="" class="blog-post-link">阅读全文 <i
+                                           class="fa fa-angle-double-right"></i></a>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-6 col-sm-6">
-                            <div class="blog-post">
-                                <div class="post-img">
-                                    <img class="img-fluid" src="images/blogs/covers/2.jpg" alt="image">
-                                </div>
-                                <div class="blog-details">
-                                    <a target="_blank"
-                                       href="https://mp.weixin.qq.com/s?__biz=MzU0NjQzNDAwNA==&mid=2247483770&idx=1&sn=07502d8306e0d3af460287fb3ed61da1&chksm=fb5cffc1cc2b76d70ab3f39e75cc0dc73345911b41b69e13e97b1b6e5f163f78f35cc70f3cac&token=918024724&lang=zh_CN#rd">
-                                        <h4 class="media-heading">【汇总】唱出对祖国的热爱，和全国人民一起#比心中国#</h4>
-                                    </a>
-                                    <p>新的一年将至，全国上下掀起了形形色色的“快闪”热潮，以此表达对祖国的热爱以及对来年的美好祝福。</p>
-                                    <a target="_blank"
-                                       href="https://mp.weixin.qq.com/s?__biz=MzU0NjQzNDAwNA==&mid=2247483770&idx=1&sn=07502d8306e0d3af460287fb3ed61da1&chksm=fb5cffc1cc2b76d70ab3f39e75cc0dc73345911b41b69e13e97b1b6e5f163f78f35cc70f3cac&token=918024724&lang=zh_CN#rd"
-                                       class="blog-post-link">Read More <i class="fa fa-angle-double-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-6">
-                            <div class="blog-post">
-                                <div class="post-img">
-                                    <img class="img-fluid" src="images/blogs/covers/1.jpg" alt="image">
-                                </div>
-                                <div class="blog-details">
-                                    <a target="_blank"
-                                       href="https://mp.weixin.qq.com/s?__biz=MzU0NjQzNDAwNA==&mid=2247483751&idx=1&sn=fa2ba0354331443aaf368d030a329e5a&chksm=fb5cffdccc2b76ca859c0bf67d3ffbb0b4d4d46379791816641ef8d499e33ab1e9896e45f345#rd">
-                                        <h4 class="media-heading">《零的执行人》引起对网络安全的思考.</h4>
-                                    </a>
-                                    <p>网络上'暗'流涌动，Iot设备安全性备受质疑</p>
-                                    <a target="_blank"
-                                       href="https://mp.weixin.qq.com/s?__biz=MzU0NjQzNDAwNA==&mid=2247483751&idx=1&sn=fa2ba0354331443aaf368d030a329e5a&chksm=fb5cffdccc2b76ca859c0bf67d3ffbb0b4d4d46379791816641ef8d499e33ab1e9896e45f345#rd"
-                                       class="blog-post-link">Read More <i class="fa fa-angle-double-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-6">
-                            <div class="blog-post">
-                                <div class="post-img">
-                                    <img class="img-fluid" src="images/blogs/covers/0.jpg" alt="image">
-                                </div>
-                                <div class="blog-details">
-                                    <a target="_blank"
-                                       href="https://mp.weixin.qq.com/s?__biz=MzU0NjQzNDAwNA==&mid=2247483670&idx=1&sn=ca6187ed28653492ce71c8c55a5af59c&chksm=fb5cffadcc2b76bbb71c288921b07cc1fec505f17d18c28fcf1044c0a19a357e6c76870951bb#rd">
-                                        <h4 class="media-heading">今日•立冬</h4>
-                                    </a>
-                                    <p>今天立冬啦！小朋友们还不快来北师大看落叶🍂！</p>
-                                    <a target="_blank"
-                                       href="https://mp.weixin.qq.com/s?__biz=MzU0NjQzNDAwNA==&mid=2247483670&idx=1&sn=ca6187ed28653492ce71c8c55a5af59c&chksm=fb5cffadcc2b76bbb71c288921b07cc1fec505f17d18c28fcf1044c0a19a357e6c76870951bb#rd"
-                                       class="blog-post-link">Read More <i class="fa fa-angle-double-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <!--<div class="col-12">
+
+                        <div class="col-12">
                             <div class="see-more"><a href="#" class="btn btn-primary main-btn bg-main">View All Post</a>
                             </div>
-                        </div>-->
+                        </div>
                     </div>
                 </div>
             </div>
@@ -259,13 +168,15 @@
     <!--=== 联系方式 ===-->
     <section id="cont" class="feature list-feature">
         <div class="container">
-            <div class="row">
+            <div class="row" id="cont_list">
                 <div class="col-12">
                     <div class="section-header">
                         <div class="sec-icon"><i class="ion ion-android-settings"></i></div>
                         <div class="sec-title">Social Media</div>
                     </div>
                 </div>
+
+                <!--以下内容由 Ajax 动态加载-->
                 <div class="col-lg-6 col-sm-12">
                     <div class="feature-wrap">
                         <div class="media">
@@ -273,98 +184,13 @@
                                 <div class="icon-wrap"><i class="ion ion-cube"></i></div>
                             </div>
                             <div class="media-body">
-                                <a target="_blank" href="https://weixin.qq.com/r/AiiVjbjEk_Xsrfzu930Q">Wechat
-                                    Subscription Account</a>
+                                <a target="_blank" href="">加载中</a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 col-sm-12">
-                    <div class="feature-wrap">
-                        <div class="media">
-                            <div class="align-self-center mr-4">
-                                <div class="icon-wrap"><i class="ion ion-ios-navigate"></i></div>
-                            </div>
-                            <div class="media-body">
-                                <a target="_blank"
-                                   href="http://wpa.qq.com/msgrd?v=3&uin=1092498519&site=qq&menu=yes">Tencent® QQ</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-sm-12">
-                    <div class="feature-wrap">
-                        <div class="media">
-                            <div class="align-self-center mr-4">
-                                <div class="icon-wrap"><i class="ion ion-crop"></i></div>
-                            </div>
-                            <div class="media-body">
-                                <a target="_blank"
-                                   href="https://tieba.baidu.com/home/main?id=e8a5e699afe998b35f6c6f7665d243&red_tag=a3132061843">Baidu-Tieba</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-sm-12">
-                    <div class="feature-wrap">
-                        <div class="media">
-                            <div class="align-self-center mr-4">
-                                <div class="icon-wrap"><i class="ion ion-android-checkbox"></i></div>
-                            </div>
-                            <div class="media-body">
-                                <a target="_blank" href="https://weibo.com/u/5983278726">Sina Weibo</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-sm-12">
-                    <div class="feature-wrap">
-                        <div class="media">
-                            <div class="align-self-center mr-4">
-                                <div class="icon-wrap"><i class="ion ion-cube"></i></div>
-                            </div>
-                            <div class="media-body">
-                                <a target="_blank" href="https://www.zhihu.com/people/jing-yang-22-62/">Zhihu</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-sm-12">
-                    <div class="feature-wrap">
-                        <div class="media">
-                            <div class="align-self-center mr-4">
-                                <div class="icon-wrap"><i class="ion ion-ios-navigate"></i></div>
-                            </div>
-                            <div class="media-body">
-                                <a target="_blank" href="https://twitter.com/JingYang1999">Twitter</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-sm-12">
-                    <div class="feature-wrap">
-                        <div class="media">
-                            <div class="align-self-center mr-4">
-                                <div class="icon-wrap"><i class="ion ion-crop"></i></div>
-                            </div>
-                            <div class="media-body">
-                                <a target="_blank" href="https://github.com/JingYang1999/">Github</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-sm-12">
-                    <div class="feature-wrap">
-                        <div class="media">
-                            <div class="align-self-center mr-4">
-                                <div class="icon-wrap"><i class="ion ion-android-checkbox"></i></div>
-                            </div>
-                            <div class="media-body">
-                                <a target="_blank" href="mailto:jingyang@iisjy.cn">Personal Email</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
+
             </div>
         </div>
     </section>

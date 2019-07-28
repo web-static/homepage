@@ -1,0 +1,44 @@
+{
+    "cont_items": [
+        {
+            "name": "Wechat Subscription Account",
+            "link": "https://weixin.qq.com/r/AiiVjbjEk_Xsrfzu930Q",
+            "img": ""
+        },
+        {
+            "name": "Tencent® QQ",
+            "link": "http://wpa.qq.com/msgrd?v=3&uin=1092498519&site=qq&menu=yes",
+            "img": ""
+        },
+        {
+            "name": "Baidu-Tieba",
+            "link": "https://tieba.baidu.com/home/main?id=e8a5e699afe998b35f6c6f7665d243&red_tag=a3132061843",
+            "img": ""
+        },
+        {
+            "name": "Sina Weibo",
+            "link": "https://weibo.com/u/5983278726",
+            "img": ""
+        },
+        {
+            "name": "Zhihu",
+            "link": "https://www.zhihu.com/people/jing-yang-22-62/",
+            "img": ""
+        },
+        {
+            "name": "Twitter",
+            "link": "https://twitter.com/JingYang1999",
+            "img": ""
+        },
+        {
+            "name": "Github",
+            "link": "https://github.com/JingYang1999/",
+            "img": ""
+        },
+        {
+            "name": "Personal Email",
+            "link": "mailto:jingyang@iisjy.cn",
+            "img": ""
+        }
+    ]
+}

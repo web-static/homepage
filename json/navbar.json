@@ -1,0 +1,24 @@
+{
+    "nav_items": [
+        {
+            "title": "主页",
+            "link": "/"
+        },
+        {
+            "title": "项目",
+            "link": "proj"
+        },
+        {
+            "title": "博客",
+            "link": "#blog"
+        },
+        {
+            "title": "社交媒体",
+            "link": "#cont"
+        },
+        {
+            "title": "备用",
+            "link": "/unvisible.html"
+        }
+    ]
+}
