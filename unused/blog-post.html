@@ -319,8 +319,9 @@
 
     <!-- ==== js after load ==== -->
     <script>
-    $(function(){
-        $(".footerpage").load("/footer.html");
+    var jq=jQuery.noConflict();
+    jq(function(){
+        jq(".footerpage").load("/footer.html");
     });
     </script>
 
