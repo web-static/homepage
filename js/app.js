@@ -69,7 +69,7 @@ function getProject() {
     document.getElementById("proj_list").innerHTML = l + s + r;
 }
 function init_elements() {
-    getNavbar();
+    //getNavbar();
     getProject();
     getBlog();
     getContact();
