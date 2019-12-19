@@ -169,19 +169,16 @@
     </section>
 
     <!--=== footer ===-->
-    <section class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="footer-wrap text-center">
-                        <div class="footer-tag">www.iisjy.cn</div>
-                        <div class="footer-tag">Copyleft 2019 | No Rights Reserved</div>
-                        <div class="footer-tag"><a href="http://beian.miit.gov.cn/">京ICP备19056100号-1</a></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <section class="footer"></section>
+
+    <!-- ==== js after load ==== -->
+    <script>
+    var jq=jQuery.noConflict();
+    jq(function(){
+        //jq(".header").load("/utility/header.html");
+        jq(".footer").load("/utility/footer.html");
+    });
+    </script>
 </body>
 
 </html>
