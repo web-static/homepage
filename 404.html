@@ -54,6 +54,18 @@ permalink: /404.html
             <h1>This page(s) is now under construction, please visit later.</h1>
             </a></div>
     </div>
+    
+    <!--=== footer ===-->
+    <section class="footer"></section>
+
+    <!-- ==== js after load ==== -->
+    <script>
+    var jq=jQuery.noConflict();
+    jq(function(){
+        jq(".header").load("/utility/header.html");
+        jq(".footer").load("/utility/footer.html");
+    });
+    </script>
 </body>
 
 </html>
