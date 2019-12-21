@@ -5,7 +5,6 @@
             "imglocation": "img.iisjy.cn",
             "imgtype": "png",
             "imghash": "ede153b0f35801d6431ec2be1ed819dc7211fc314975176b1c2424e39b3e5e80a0b73213d450b74d442828b268f1c75d9532063ea2ae0d351f6bc539b73e4a45",
-            "imgpath": "images/Next.png",
             "link": "https://iot.iisjy.cn"
         },
         {
@@ -13,7 +12,6 @@
             "imglocation": "img.iisjy.cn",
             "imgtype": "png",
             "imghash": "8e1f170ac7ee474543326bc9d3e663e84f9bfe511331a633414672d3fb6e714e7c907a1c03b39096b217c5b9208d66cdc4bbf5c0f2f070f04feb215f54855750",
-            "imgpath": "https://raw.githubusercontent.com/JingYang1999/Calendar_demo/master/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png",
             "link": "https://github.com/JingYang1999/Calendar_demo"
         },
         {
@@ -21,7 +19,6 @@
             "imglocation": "img.iisjy.cn",
             "imgtype": "png",
             "imghash": "eb0e8205884bf8d4c62f2633d53838a7b360c61fbdd3bd97f01ad013ae9127f66b57c769d13688918e18d75b310a5b338778528dfe4f0956812bd7484937f7ce",
-            "imgpath": "images/Proj-1.png",
             "link": "https://github.com/JingYang1999/Gobang-python3/"
         },
         {
@@ -29,7 +26,6 @@
             "imglocation": "img.iisjy.cn",
             "imgtype": "png",
             "imghash": "3d439ab81fc0827fc13e537e35249f58ccc75c953635e53e9cf4097529e5b20c2ad9da390181b6d7e8059f5ff1a6b25f04d6c060293abf33b4152a6be5025c39",
-            "imgpath": "images/proj-2.png",
             "link": "https://github.com/JingYang1999/Sudoku/"
         },
         {
@@ -37,7 +33,6 @@
             "imglocation": "img.iisjy.cn",
             "imgtype": "png",
             "imghash": "eb0d33252e0c6e7d324e796436613768956a93a9ed3b6e5e60a0610a87ba62ab14702149eae979addae2d86021a3d083964a6cedbeeee6b6ac33da45329560d9",
-            "imgpath": "images/proj-3.png",
             "link": "https://github.com/JingYang1999/Gobang-cpp/"
         }
     ]
