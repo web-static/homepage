@@ -62,14 +62,14 @@ function getProject() {
     var l = '<div class="col-12"><div class="section-header" ><div class="sec-icon"><i class="ion ion-android-list"></i></div><div class="sec-title">Projects</div></div ></div >';
     var s = '';
     var r = '<div class="col-12"><div class="see-more" ><a target="_blank" href="#" class="btn btn-primary main-btn bg-main">View More</a></div ></div >';
-
+    var tpath = '';
     for (var i = 0; i < obj.project_items.length; i++) {
-        s += getProjectTag(obj.project_items[i].name, obj.project_items[i].imgpath, obj.project_items[i].link);
+        tpath = 'https://' + obj.project_items[i].imglocation + '/getpic?type=' + obj.project_items[i].imgtype + '&hash=' + obj.project_items[i].imghash;
+        s += getProjectTag(obj.project_items[i].name, tpath, obj.project_items[i].link);
     }
     document.getElementById("proj_list").innerHTML = l + s + r;
 }
 function init_elements() {
-    //getNavbar();
     getProject();
     getBlog();
     getContact();
