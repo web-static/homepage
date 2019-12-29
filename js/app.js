@@ -6,27 +6,27 @@ function getContactTag(t_name, t_link) {
   var s = `<div class="col-lg-6 col-sm-12"><div class="feature-wrap" ><div class="media"><div class="align-self-center mr-4"><div class="icon-wrap"><i class="ion ion-cube"></i></div></div><div class="media-body"><a target="_blank" href="${t_link}">${t_name}</a></div></div></div ></div >`;
   return s;
 }
-// function getNavbarTag(t_link, t_title) {
-//   var s = `<li class="nav-item"><a class="nav-link" href = "${t_link}" >${t_title}</a ></li >`;
-//   return s;
-// }
+function getNavbarTag(t_link, t_title) {
+  var s = `<li class="nav-item"><a class="nav-link" href = "${t_link}" >${t_title}</a ></li >`;
+  return s;
+}
 function getProjectTag(t_name, t_imgpath, t_link) {
   var s = `<div class="col-lg-4 col-md-4 col-sm-6"><div class="product-wrap" ><div class="img-wrap"><img src="${t_imgpath}" alt="${t_name}" /><div class="product-overlay"><a target="_blank" href="${t_link}" class="icon-wrap"><i class="ion ion-android-arrow-forward"></i></a></div></div></div ></div >`;
   return s;
 }
 
-// function getNavbar() {
-//   var obj = null;
-//   obj = get_Ajax_json_obj("json/navbar.json");
-//   if (obj == null) return;
+function getNavbar() {
+  var obj = null;
+  obj = get_Ajax_json_obj("json/navbar.json");
+  if (obj == null) return;
 
-//   var s = '';
+  var s = '';
 
-//   for (var i = 0; i < obj.nav_items.length; i++) {
-//       s += getNavbarTag(obj.nav_items[i].link, obj.nav_items[i].title);
-//   }
-//   document.getElementById("navi_list").innerHTML = s;
-// }
+  for (var i = 0; i < obj.nav_items.length; i++) {
+      s += getNavbarTag(obj.nav_items[i].link, obj.nav_items[i].title);
+  }
+  document.getElementById("navi_list").innerHTML = s;
+}
 function getBlog() {
   var obj = null;
   obj = get_Ajax_json_obj("json/bloglist.json");
@@ -64,7 +64,7 @@ function getProject() {
   var r = '<div class="col-12"><div class="see-more" ><a target="_blank" href="#" class="btn btn-primary main-btn bg-main">View More</a></div ></div >';
   var tpath = '';
   for (var i = 0; i < obj.project_items.length; i++) {
-      tpath = 'https://${obj.project_items[i].imglocation}/getpic?type=${obj.project_items[i].imgtype}&hash=${obj.project_items[i].imghash;
+      tpath = `https://${obj.project_items[i].imglocation}/getpic?type=${obj.project_items[i].imgtype}&hash=${obj.project_items[i].imghash}`;
       s += getProjectTag(obj.project_items[i].name, tpath, obj.project_items[i].link);
   }
   document.getElementById("proj_list").innerHTML = l + s + r;
