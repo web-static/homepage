@@ -38,7 +38,7 @@
         .then(function (c) { document.getElementById('tmp').innerHTML = c; })
         .then(function (s) {
           sessionStorage.setItem("BlogInfo", document.getElementById('tmp').innerHTML);
-          document.getElementById('tmp').innerHTML="";
+          document.getElementById('tmp').innerHTML = "";
         })
         .then(function () {
           var obj = JSON.parse(sessionStorage.getItem("BlogInfo"));
@@ -46,15 +46,15 @@
           document.getElementById('blog-title').innerHTML = obj.article_title;
           document.getElementById('blog-createtime').innerHTML = obj.article_createtime;
           document.getElementById('blog-cover').src = obj.article_cover;
-          
+
         })
         .then(function () {
           var obj = JSON.parse(sessionStorage.getItem("BlogInfo"));
           fetch(obj.article_content)
-          .then(function (response) { return response.text(); })
-          .then(function (c){
-            document.getElementById('blog-content').innerHTML = marked(c);
-          })
+            .then(function (response) { return response.text(); })
+            .then(function (c) {
+              document.getElementById('blog-content').innerHTML = marked(c);
+            })
         })
         .catch()
     }
@@ -86,11 +86,11 @@
             </div>
 
             <!-- 封面 -->
-            <img id="blog-cover" src="https://www.iisjy.cn/images/loading.svg" alt="#" >
-            <!-- class="img-fluid featured-img" -->
+            <img id="blog-cover" src="https://www.iisjy.cn/images/loading.svg" alt="#"
+            class="img-fluid featured-img" mask="">
             <div class="row">
               <div class="col-12">
-                <div id="blog-content" class="card-details">                </div>
+                <div id="blog-content" class="card-details"> </div>
               </div>
             </div>
           </div>
