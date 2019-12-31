@@ -45,6 +45,7 @@
 
         .then(function (obj) {
           // var obj = sessionStorage.getItem("BlogInfo");
+          console.log(sessionStorage.getItem("BlogInfo"));
           document.title = obj.article_title;
           document.getElementById('blog-title').innerHTML = obj.article_title;
           document.getElementById('blog-createtime').innerHTML = obj.article_createtime;
