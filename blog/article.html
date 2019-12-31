@@ -42,18 +42,21 @@
           document.getElementById('tmp').innerHTML="";
           // return obj;
         })
-
         .then(function () {
           var obj = JSON.parse(sessionStorage.getItem("BlogInfo"));
           document.title = obj.article_title;
           document.getElementById('blog-title').innerHTML = obj.article_title;
           document.getElementById('blog-createtime').innerHTML = obj.article_createtime;
           document.getElementById('blog-cover').src = obj.article_cover;
-          document.getElementById('blog-content').innerHTML = obj.article_content;
+          
         })
-        .then(
-
-        )
+        .then(function () {
+          var obj = JSON.parse(sessionStorage.getItem("BlogInfo"));
+          fetch(obj.article_content)
+          .then(function (response){
+            document.getElementById('blog-content').innerHTML = response.text();
+          })
+        })
         .catch()
     }
 
