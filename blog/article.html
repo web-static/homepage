@@ -34,19 +34,23 @@
       var blogid = new URL(window.location.href).searchParams.get('id');
       var infourl = `https://www.iisjy.cn/json/blog/${blogid}.json`;
       fetch(infourl)
-        // .then(function (response){alert(typeof response.text())})
         .then(function (response) { return response.text(); })
-        .then(function (s) {console.log(s);})
-        .then(function (c) {sessionStorage.setItem("t",c);})
-        .then(function (s) {return JSON.parse(sessionStorage.getItem("t"));})
-        .then(function (s) {console.log(s);})
+        .then(function (c) {document.getElementById('tmp').innerHTML=c;})
+        .then(function (s) {return JSON.parse(document.getElementById('tmp').innerHTML);})
+        // .then(function (s) {console.log(s);})
         // .then(function (){document.getElementById('ccc').innerHTML=""})
         .then(function (obj) {
+          sessionStorage.setItem("BlogInfo",obj);
           document.title=obj.article_title;
+          document.getElementById('blog-title').innerHTML=obj.article_title;
+          
         })
+        .then(
+
+        )
         .catch()
     }
-    getBlogInfo();
+    
   </script>
 </head>
 
@@ -56,7 +60,7 @@
   <header class="header"></header>
 
   <!--=== single blog post ===-->
-  <section class="blog-post single-post">
+  <section id="blog-content" class="blog-post single-post">
     <div class="container">
       <div class="row">
         <div class="col-lg-10 col-md-12-12 col-sm-12 mx-auto">
@@ -68,8 +72,8 @@
                 <li class="list-inline-item"><a href="#">Theme</a></li>
                 <li class="list-inline-item"><a href="#">Corporate</a></li>
               </ul>
-              <div id="ccc"></div>
-              <h1>The best preparation for tomorrow is doing your best today </h1>
+              
+              <h1 id="blog-title"></h1>
             </div>
             <a href="Blog Post Image" class="post-image"><img src="images/shade.jpg" alt="#"
                 class="img-fluid featured-img"></a>
@@ -302,9 +306,10 @@
 
   <!--=== footer ===-->
   <section class="footer"></section>
-
+  <div id="tmp" style="width: 0px;height: 0px;" ></div>
   <!-- ==== js after load ==== -->
   <script>
+    getBlogInfo();
     var jq = jQuery.noConflict();
     jq(function () {
       jq(".header").load("/utility/header.html");
