@@ -7,28 +7,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>博客正文</title>
 
-    
+
     <!-- === JS CDN === -->
     <script src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    <script src="https://cdn.staticfile.org/popper.js/1.16.0/popper.min.js" type="module"></script> 
-    
+    <script src="https://cdn.staticfile.org/popper.js/1.16.0/popper.min.js" type="module"></script>
+    <script src="https://cdn.staticfile.org/marked/0.8.0/marked.min.js"></script>
+
     <!-- ==== js ==== -->
     <script src="/js/app.js"></script>
-    
+
     <!-- === CSS CDN === -->
     <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
-    
+
     <!-- === CSS === -->
     <link rel="stylesheet" href="/css/ionicons.css">
     <link rel="stylesheet" href="/css/now-ui-kit.css">
     <link rel="stylesheet" href="/css/app.css">
-        
+
     <!-- ==== icon ==== -->
     <link rel="icon" type="image/svg+xml" sizes="any" mask="" href="/images/favicon/favicon.svg">
     <link rel="icon" type="image/x-icon" href="/images/favicon/favicon256.ico" />
 
-
+    <script>
+        function getBlogInfo() {
+            var blogid = new URL(window.location.href).searchParams.get('id');
+            var infourl = `/json/blog/${blogid}.json`;
+            alert(infourl);
+            fetch(infourl)
+                .then(alert(this.text()))
+                .catch()
+        }
+    </script>
 </head>
 
 <body>
@@ -52,7 +62,7 @@
                             <h1>The best preparation for tomorrow is doing your best today </h1>
                         </div>
                         <a href="Blog Post Image" class="post-image"><img src="images/shade.jpg" alt="#"
-                                 class="img-fluid featured-img"></a>
+                                class="img-fluid featured-img"></a>
                         <div class="row">
                             <div class="col-12">
                                 <div class="card-details">
@@ -96,7 +106,7 @@
     </section>
 
     <!--=== blog comments ===-->
-<!--     <section class="all-comments contact">
+    <!--     <section class="all-comments contact">
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 col-md-12-12 col-sm-12 mx-auto">
@@ -189,7 +199,7 @@
     </section> -->
 
     <!--=== blog page ===-->
-<!--     <section class="blog-posts">
+    <!--     <section class="blog-posts">
         <div class="container">
             <div class="row">
                 <div class="col">
@@ -285,11 +295,11 @@
 
     <!-- ==== js after load ==== -->
     <script>
-    var jq=jQuery.noConflict();
-    jq(function(){
-        jq(".header").load("/utility/header.html");
-        jq(".footer").load("https://static.iisjy.cn/html/utility/footer.html");
-    });
+        var jq = jQuery.noConflict();
+        jq(function () {
+            jq(".header").load("/utility/header.html");
+            jq(".footer").load("https://static.iisjy.cn/html/utility/footer.html");
+        });
     </script>
 
 </body>
