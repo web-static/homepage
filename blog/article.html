@@ -35,22 +35,24 @@
       var infourl = `https://www.iisjy.cn/json/blog/${blogid}.json`;
       fetch(infourl)
         .then(function (response) { return response.text(); })
-        .then(function (c) {document.getElementById('tmp').innerHTML=c;})
-        .then(function (s) {return JSON.parse(document.getElementById('tmp').innerHTML);})
+        .then(function (c) { document.getElementById('tmp').innerHTML = c; })
+        .then(function (s) { return JSON.parse(document.getElementById('tmp').innerHTML); })
         // .then(function (s) {console.log(s);})
         // .then(function (){document.getElementById('ccc').innerHTML=""})
         .then(function (obj) {
-          sessionStorage.setItem("BlogInfo",obj);
-          document.title=obj.article_title;
-          document.getElementById('blog-title').innerHTML=obj.article_title;
-          
+          sessionStorage.setItem("BlogInfo", obj);
+          document.title = obj.article_title;
+          document.getElementById('blog-title').innerHTML = obj.article_title;
+          document.getElementById('blog-createtime').innerHTML = obj.article_createtime;
+          document.getElementById('blog-cover').src = obj.article_cover;
+          document.getElementById('blog-content').innerHTML = obj.article_content;
         })
         .then(
 
         )
         .catch()
     }
-    
+
   </script>
 </head>
 
@@ -60,26 +62,28 @@
   <header class="header"></header>
 
   <!--=== single blog post ===-->
-  <section id="blog-content" class="blog-post single-post">
+  <section class="blog-post single-post">
     <div class="container">
       <div class="row">
         <div class="col-lg-10 col-md-12-12 col-sm-12 mx-auto">
           <div class="post post-card">
             <div class="single-post-header">
-              <div class="post-tag">November 18, 2018</div>
-              <ul class="list-inline blog-item-links">
+              <!-- 发表时间 -->
+              <div class="post-tag" id="blog-time"></div>
+              <!-- <ul class="list-inline blog-item-links">
                 <li class="list-inline-item"><a href="#">Wordpress</a></li>
                 <li class="list-inline-item"><a href="#">Theme</a></li>
                 <li class="list-inline-item"><a href="#">Corporate</a></li>
-              </ul>
-              
+              </ul> -->
+              <!-- 标题 -->
               <h1 id="blog-title"></h1>
             </div>
-            <a href="Blog Post Image" class="post-image"><img src="images/shade.jpg" alt="#"
-                class="img-fluid featured-img"></a>
+
+            <!-- 封面 -->
+            <img id="blog_cover" src="https://www.iisjy.cn/images/loading.svg" alt="#" class="img-fluid featured-img">
             <div class="row">
               <div class="col-12">
-                <div class="card-details">
+                <div id="blog-content" class="card-details">
                   <p>
                     There are many variations of passages of Lorem Ipsum available, but the majority
                     have suffered alteration in some form, by injected humour, or randomised words
@@ -306,7 +310,7 @@
 
   <!--=== footer ===-->
   <section class="footer"></section>
-  <div id="tmp" style="width: 0px;height: 0px;" ></div>
+  <div id="tmp" style="width: 0px;height: 0px;"></div>
   <!-- ==== js after load ==== -->
   <script>
     getBlogInfo();
