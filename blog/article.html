@@ -38,7 +38,7 @@
         .then(function (c) { document.getElementById('tmp').innerHTML = c; })
         .then(function (s) {
           sessionStorage.setItem("BlogInfo", JSON.parse(document.getElementById('tmp').innerHTML));
-          document.getElementById('tmp').innerHTML="";
+          // document.getElementById('tmp').innerHTML="";
         })
 
         .then(function () {
