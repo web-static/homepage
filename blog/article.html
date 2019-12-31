@@ -37,10 +37,8 @@
         .then(function (response) { return response.text(); })
         .then(function (c) { document.getElementById('tmp').innerHTML = c; })
         .then(function (s) {
-          // var obj=JSON.parse(document.getElementById('tmp').innerHTML);
           sessionStorage.setItem("BlogInfo", document.getElementById('tmp').innerHTML);
           document.getElementById('tmp').innerHTML="";
-          // return obj;
         })
         .then(function () {
           var obj = JSON.parse(sessionStorage.getItem("BlogInfo"));
@@ -88,7 +86,8 @@
             </div>
 
             <!-- 封面 -->
-            <img id="blog-cover" src="https://www.iisjy.cn/images/loading.svg" alt="#" class="img-fluid featured-img">
+            <img id="blog-cover" src="https://www.iisjy.cn/images/loading.svg" alt="#" >
+            <!-- class="img-fluid featured-img" -->
             <div class="row">
               <div class="col-12">
                 <div id="blog-content" class="card-details">
