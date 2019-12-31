@@ -44,7 +44,7 @@
         })
 
         .then(function () {
-          var obj = SON.parse(sessionStorage.getItem("BlogInfo"));
+          var obj = JSON.parse(sessionStorage.getItem("BlogInfo"));
           document.title = obj.article_title;
           document.getElementById('blog-title').innerHTML = obj.article_title;
           document.getElementById('blog-createtime').innerHTML = obj.article_createtime;
