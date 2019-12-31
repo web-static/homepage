@@ -44,7 +44,7 @@
         })
 
         .then(function () {
-          var obj = sessionStorage.getItem("BlogInfo");
+          var obj = JSON.parse(JSON.stringify(sessionStorage.getItem("BlogInfo")));
           console.log(sessionStorage.getItem("BlogInfo"));
           document.title = obj.article_title;
           document.getElementById('blog-title').innerHTML = obj.article_title;
