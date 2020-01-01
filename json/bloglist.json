@@ -1,6 +1,12 @@
 {
     "blog_pages": [
         {
+            "title": "2020来了",
+            "summary": "",
+            "img": "https://repo-img-cdn.iisjy.cn/svg/8841b06790fb28f2dae93952fbbe1c8b43aba623be87979e176a938a292ed2a75e014e077ea8c8ff2becdb60af2fbb89f8a237533077ac37312c439a44b0ef35.svg",
+            "link": "https://www.iisjy.cn/blog/article.html?id=4"
+        },        
+        {
             "title": "这个人想盗我号！",
             "summary": "神秘邮件蕴藏陷阱，真真假假难分难辩；<br />黑色产业猖狂发展，不法分子逍遥法外；<br />监管部门束手无策，网络安全形势严峻",
             "img": "images/blogs/covers/3.jpg",
