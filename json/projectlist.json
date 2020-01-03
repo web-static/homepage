@@ -3,36 +3,36 @@
         {
             "name": "物联网",
             "imglocation": "img.iisjy.cn",
-            "imgtype": "png",
-            "imghash": "ede153b0f35801d6431ec2be1ed819dc7211fc314975176b1c2424e39b3e5e80a0b73213d450b74d442828b268f1c75d9532063ea2ae0d351f6bc539b73e4a45",
+            "imgtype": "webp",
+            "imghash": "997160504e18f2ac6ceb1e936bb84a3ed0cd7726f6a9a94bd9f21c52343cc6b6d5a2f719f61372ab5371a2e0a6d4c6bf615278b1643c63cb09a58e455f13e0d0",
             "link": "https://iot.iisjy.cn"
         },
         {
             "name": "日历 APP",
             "imglocation": "img.iisjy.cn",
-            "imgtype": "png",
-            "imghash": "8e1f170ac7ee474543326bc9d3e663e84f9bfe511331a633414672d3fb6e714e7c907a1c03b39096b217c5b9208d66cdc4bbf5c0f2f070f04feb215f54855750",
+            "imgtype": "webp",
+            "imghash": "8cb9da92f4e5ee44931f9bdb351b0444c080b0224ccc5ec7d8e0fd479d7b28df4004745a4fea55d87bd6cddf56056a16b492af031a68bd47642b55c81fefe6a7",
             "link": "https://github.com/JingYang1999/Calendar_demo"
         },
         {
             "name": "五子棋_GUI",
             "imglocation": "img.iisjy.cn",
-            "imgtype": "png",
-            "imghash": "eb0e8205884bf8d4c62f2633d53838a7b360c61fbdd3bd97f01ad013ae9127f66b57c769d13688918e18d75b310a5b338778528dfe4f0956812bd7484937f7ce",
+            "imgtype": "webp",
+            "imghash": "4ec2b04c173df6ffbf943afc256f8a30ea7d034cbffe2ee50aa8c99a72cc3ec1ff14c71668fb2efe4970939a3ee3b090221cc3bf00fe86a1a9abbd4970b63587",
             "link": "https://github.com/JingYang1999/Gobang-python3/"
         },
         {
             "name": "数独",
             "imglocation": "img.iisjy.cn",
-            "imgtype": "png",
-            "imghash": "3d439ab81fc0827fc13e537e35249f58ccc75c953635e53e9cf4097529e5b20c2ad9da390181b6d7e8059f5ff1a6b25f04d6c060293abf33b4152a6be5025c39",
+            "imgtype": "webp",
+            "imghash": "f6e2da60224ebca9d175fa6eafe15c8c01695fb2114fb4cc1a54cdcb8261dd5f77591df21dd233dc4180c6bace04653cb8852769b0c808f5a9987e32abf202c2",
             "link": "https://github.com/JingYang1999/Sudoku/"
         },
         {
             "name": "五子棋_控制台",
             "imglocation": "img.iisjy.cn",
-            "imgtype": "png",
-            "imghash": "eb0d33252e0c6e7d324e796436613768956a93a9ed3b6e5e60a0610a87ba62ab14702149eae979addae2d86021a3d083964a6cedbeeee6b6ac33da45329560d9",
+            "imgtype": "webp",
+            "imghash": "dc3fa3757cfb208e95c899d044c6700117b7e35ff366e6ecc7ee2cce4af4dff7fe99098f8b625ad508305bc1b5073684329bd4b27cba73663c4a7d716a945d40",
             "link": "https://github.com/JingYang1999/Gobang-cpp/"
         }
     ]
