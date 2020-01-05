@@ -2,4 +2,7 @@ User-agent: *
 Disallow: /js/
 Disallow: /css/
 Disallow: /json/
+Disallow: /fonts/
+Disallow: /images/
 Disallow: /utility/
+Disallow: /blog/content/
