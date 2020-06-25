@@ -36,13 +36,13 @@ function getBlog() {
   obj = get_Ajax_json_obj("json/bloglist.json");
   if (obj == null) return;
 
-  var l = '<div class="col-12"><div class="section-header" ><div class="sec-icon"><i class="ion ion-android-list"></i></div><div class="sec-title">Recent Blog Post</div></div ></div > ';
-  var r = '<div class="col-12"><div class="see-more" ><a href="" class="btn btn-primary main-btn bg-main">View All Post</a></div ></div >';
+  const l = '<div class="col-12"><div class="section-header" ><div class="sec-icon"><i class="ion ion-android-list"></i></div><div class="sec-title">Recent Blog Post</div></div ></div > ';
+  const r = '<div class="col-12"><div class="see-more" ><a href="" class="btn btn-primary main-btn bg-main">View All Post</a></div ></div >';
   var s = '';
 
   for (var i = 0; i < obj.blog_pages.length; i++) {
     let tpath = `https://img-${obj.blog_pages[i].imgtype}-cdn.iisjy.cn/${obj.blog_pages[i].imghash}.${obj.blog_pages[i].imgtype}`;
-    s += getBlogTag(obj.blog_pages[i].title, obj.blog_pages[i].summary, obj.blog_pages[i].img, obj.blog_pages[i].link);
+    s += getBlogTag(obj.blog_pages[i].title, obj.blog_pages[i].summary, tpath, obj.blog_pages[i].link);
     tpath = null;
   }
   document.getElementById("blog_list").innerHTML = l + s + r;
@@ -52,7 +52,7 @@ function getContact() {
   obj = get_Ajax_json_obj("json/contact.json");
   if (obj == null) return;
 
-  var l = '<div class="col-12"><div class="section-header" ><div class="sec-icon"><i class="ion ion-android-settings"></i></div><div class="sec-title">Social Media</div></div ></div > ';
+  const l = '<div class="col-12"><div class="section-header" ><div class="sec-icon"><i class="ion ion-android-settings"></i></div><div class="sec-title">Social Media</div></div ></div > ';
   var s = '';
 
   for (var i = 0; i < obj.cont_items.length; i++) {
@@ -65,14 +65,13 @@ function getProject() {
   obj = get_Ajax_json_obj("json/projectlist.json");
   if (obj == null) return;
 
-  var l = '<div class="col-12"><div class="section-header" ><div class="sec-icon"><i class="ion ion-android-list"></i></div><div class="sec-title">Projects</div></div ></div >';
+  const l = '<div class="col-12"><div class="section-header" ><div class="sec-icon"><i class="ion ion-android-list"></i></div><div class="sec-title">Projects</div></div ></div >';
   var s = '';
-  var r = '<div class="col-12"><div class="see-more" ><a target="_blank" href="#" class="btn btn-primary main-btn bg-main">View More</a></div ></div >';
-  var tpath = '';
+  const r = '<div class="col-12"><div class="see-more" ><a target="_blank" href="#" class="btn btn-primary main-btn bg-main">View More</a></div ></div >';
   for (var i = 0; i < obj.project_items.length; i++) {
-      // tpath = `https://${obj.project_items[i].imglocation}/getpic?type=${obj.project_items[i].imgtype}&hash=${obj.project_items[i].imghash}`;
-      tpath = `https://img-${obj.project_items[i].imgtype}-cdn.iisjy.cn/${obj.project_items[i].imghash}.${obj.project_items[i].imgtype}`;
+      let tpath = `https://img-${obj.project_items[i].imgtype}-cdn.iisjy.cn/${obj.project_items[i].imghash}.${obj.project_items[i].imgtype}`;
       s += getProjectTag(obj.project_items[i].name, tpath, obj.project_items[i].link);
+      tpath = null;
   }
   document.getElementById("proj_list").innerHTML = l + s + r;
 }
