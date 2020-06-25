@@ -14,7 +14,7 @@ function init_elements() {
   .then(obj=>{
     var s = '<div class="col-12"><div class="section-header" ><div class="sec-icon"><i class="ion ion-android-list"></i></div><div class="sec-title">Recent Blog Post</div></div ></div > ';
     const r = '<div class="col-12"><div class="see-more" ><a href="" class="btn btn-primary main-btn bg-main">View All Post</a></div ></div >';
-    obj.blog_pages.forEach(elem => s+=`<div class="col-lg-4 col-md-6 col-sm-6" ><div class="blog-post"><div class="post-img"><img class="img-fluid" src="https://img-${obj.blog_pages[i].imgtype}-cdn.iisjy.cn/${obj.blog_pages[i].imghash}.${obj.blog_pages[i].imgtype}" alt="image"></div><div class="blog-details"><a target="_blank" href="${elem.link}"><h4 class="media-heading">${elem.title}</h4></a><p>${elem.summary}</p><a target="_blank" href="${elem.link}" class="blog-post-link">阅读全文 <i class="fa fa-angle-double-right"></i></a></div></div></div>`)
+    obj.blog_pages.forEach(elem => s+=`<div class="col-lg-4 col-md-6 col-sm-6" ><div class="blog-post"><div class="post-img"><img class="img-fluid" src="https://img-${elem.imgtype}-cdn.iisjy.cn/${elem.imghash}.${elem.imgtype}" alt="${elem.title}"></div><div class="blog-details"><a target="_blank" href="${elem.link}"><h4 class="media-heading">${elem.title}</h4></a><p>${elem.summary}</p><a target="_blank" href="${elem.link}" class="blog-post-link">阅读全文 <i class="fa fa-angle-double-right"></i></a></div></div></div>`)
     document.getElementById("blog_list").innerHTML = (s + r);
   });
   // 加载联系方式
