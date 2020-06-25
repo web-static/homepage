@@ -18,7 +18,7 @@
     
     
     <!-- === JS CDN === -->
-    <script src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js"></script>
+    <!-- <script src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js"></script> -->
     <script src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <script src="https://cdn.staticfile.org/popper.js/1.16.0/popper.min.js" type="module"></script> 
     
@@ -43,7 +43,7 @@
 
 <body>
     <!--=== 导航栏 ===-->
-    <header class="header">
+    <header id="header" class="header">
         <nav class="navbar navbar-expand-sm">
             <div class="container">
                 <a class="navbar-brand" href="index.html">贝塔西塔</a>
@@ -187,15 +187,10 @@
     </section>
 
     <!--=== footer ===-->
-    <section class="footer"></section>
+    <section id="footer" class="footer"></section>
 
     <!-- ==== js after load ==== -->
     <script>
-        var jq=jQuery.noConflict();
-        jq(function(){
-            jq(".header").load("/utility/header.html");
-            jq(".footer").load("https://static.iisjy.cn/html/utility/footer.html");
-        });
         init_elements();
     </script>
 </body>
