@@ -69,7 +69,7 @@ section {
     min-height: 700px;
     margin-bottom: 40px;
     position: relative;
-    background: url("../images/shade.jpg") no-repeat scroll center top / cover;
+    background: url("../images/shade.webp") no-repeat scroll center top / cover;
 }
 #home::before {
     content: "";
@@ -121,7 +121,7 @@ clip-path: polygon(0 0, 100% 0, 100% 80%, 70% 100%, 0 80%);
     min-height: 700px;
     margin-bottom: 40px;
     position: relative;
-    background: url("../images/shade.jpg") no-repeat scroll center top / cover;
+    background: url("../images/shade.webp") no-repeat scroll center top / cover;
 }
 #home-2::before {
     content: "";
@@ -145,7 +145,7 @@ clip-path: polygon(0 0, 100% 0, 100% 80%, 30% 100%, 0 80%);
     min-height: 700px;
     margin-bottom: 40px;
     position: relative;
-    background: url("../images/shade.jpg") no-repeat scroll center top / cover;
+    background: url("../images/shade.webp") no-repeat scroll center top / cover;
 }
 #home-3::before {
     content: "";
