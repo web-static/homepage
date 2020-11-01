@@ -1,6 +1,6 @@
 function init_elements() {
   // 加载项目列表
-  fetch("https://cdn.jsdelivr.net/gh/web-static/homepage/json/projectlist.json")
+  fetch("https://cdn.jsdelivr.net/gh/web-static/homepage@latest/json/projectlist.json")
   .then(resp => resp.json())
   .then(obj=>{
     var s = '';
@@ -8,7 +8,7 @@ function init_elements() {
     document.getElementById("proj_list").innerHTML = `<div class="col-12"><div class="section-header" ><div class="sec-icon"><i class="ion ion-android-list"></i></div><div class="sec-title">Projects</div></div ></div >${s}<div class="col-12"><div class="see-more" ><a target="_blank" href="#" class="btn btn-primary main-btn bg-main">View More</a></div ></div >`;
   });
   // 加载近期博文
-  fetch("https://cdn.jsdelivr.net/gh/web-static/homepage/json/bloglist.json")
+  fetch("https://cdn.jsdelivr.net/gh/web-static/homepage@latest/json/bloglist.json")
   .then(resp => resp.json())
   .then(obj=>{
     var s = '';
@@ -16,7 +16,7 @@ function init_elements() {
     document.getElementById("blog_list").innerHTML = `<div class="col-12"><div class="section-header" ><div class="sec-icon"><i class="ion ion-android-list"></i></div><div class="sec-title">Recent Blog Post</div></div ></div >${s}<div class="col-12"><div class="see-more" ><a href="" class="btn btn-primary main-btn bg-main">View All Post</a></div ></div >`;
   });
   // 加载联系方式
-  fetch("https://cdn.jsdelivr.net/gh/web-static/homepage/json/contact.json")
+  fetch("https://cdn.jsdelivr.net/gh/web-static/homepage@latest/json/contact.json")
   .then(resp => resp.json())
   .then(obj=>{
     var s  = '';
@@ -24,11 +24,11 @@ function init_elements() {
     document.getElementById("cont_list").innerHTML = `<div class="col-12"><div class="section-header" ><div class="sec-icon"><i class="ion ion-android-settings"></i></div><div class="sec-title">Social Media</div></div ></div >${s}`;
   });
 
-  fetch("https://cdn.jsdelivr.net/gh/web-static/homepage/utility/header.html")
+  fetch("https://cdn.jsdelivr.net/gh/web-static/homepage@latest/utility/header.html")
   .then(resp => resp.text())
   .then(html => document.getElementById("header").innerHTML=html)
 
-  fetch("https://cdn.jsdelivr.net/gh/web-static/Global-Element/html/utility/footer.html")
+  fetch("https://cdn.jsdelivr.net/gh/web-static/Global-Element@latest/html/utility/footer.html")
   .then(resp => resp.text())
   .then(html => document.getElementById("footer").innerHTML=html)
 }
