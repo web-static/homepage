@@ -24,11 +24,11 @@ function init_elements() {
     document.getElementById("cont_list").innerHTML = `<div class="col-12"><div class="section-header" ><div class="sec-icon"><i class="ion ion-android-settings"></i></div><div class="sec-title">Social Media</div></div ></div >${s}`;
   });
 
-  fetch("/utility/header.html")
+  fetch("https://cdn.jsdelivr.net/gh/web-static/homepage/utility/header.html")
   .then(resp => resp.text())
   .then(html => document.getElementById("header").innerHTML=html)
 
-  fetch("https://static.iisjy.cn/html/utility/footer.html")
+  fetch("https://cdn.jsdelivr.net/gh/web-static/Global-Element/html/utility/footer.html")
   .then(resp => resp.text())
   .then(html => document.getElementById("footer").innerHTML=html)
 }
