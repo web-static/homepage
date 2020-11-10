@@ -290,11 +290,13 @@
   <!-- ==== js after load ==== -->
   <script>
     getBlogInfo();
-    var jq = jQuery.noConflict();
-    jq(function () {
-      jq(".header").load("https://cdn.jsdelivr.net/gh/web-static/homepage/utility/header.html");
-      jq(".footer").load("https://cdn.jsdelivr.net/gh/web-static/Global-Element/html/utility/footer.html");
-    });
+    fetch("https://cdn.jsdelivr.net/gh/web-static/homepage@latest/utility/header.html")
+  .then(resp => resp.text())
+  .then(html => document.getElementById("header").innerHTML=html)
+
+  fetch("https://cdn.jsdelivr.net/gh/web-static/Global-Element@latest/html/utility/footer.html")
+  .then(resp => resp.text())
+  .then(html => document.getElementById("footer").innerHTML=html)
   </script>
 
 </body>
