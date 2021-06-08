@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<title>431打卡系统</title>
+<script>
+    function daka(nm){
+        fetch(`https://service-b0a47ksp-1253721708.bj.apigw.tencentcs.com/release/auto_daka_${nm}`)
+        .then(res=>res.json())
+        .then(txt=>alert(txt.m))
+        .catch(e=>alert(e))
+    }
+</script>
+</head>
+<body>
+    <center><h1>431集中打卡平台</h1></center>
+    <center><button onClick="daka('kjf')">康俊峰</button></center>
+    <center><button onClick="daka('zsk')">张书楷</button></center>
+    <center><button onClick="daka('zlr')">张力仁</button></center>
+    <center><button onClick="daka('cjm')">程家铭</button></center>
+    <center><button onClick="daka('jy')">景阳</button></center>
+</body>
+</html>
