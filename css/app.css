@@ -72,7 +72,6 @@ section {
     background: url("../images/shade.webp") no-repeat scroll center top / cover;
 }
 #home::before {
-    content: "";
     height: 100%;
     left: 0;
     top: 0;
