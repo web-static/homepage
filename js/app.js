@@ -20,7 +20,7 @@ function init_elements() {
   .then(resp => resp.json())
   .then(obj=>{
     var s  = '';
-    obj.cont_items.forEach(elem => s+= `<div class="col-lg-6 col-sm-12"><div class="feature-wrap" ><div class="media"><div class="align-self-center mr-4"><div class="icon-wrap"><i class="ion ion-cube"></i></div></div><div class="media-body"><a target="_blank" href="${elem.link}">${elem.name}</a></div></div></div ></div >`);
+    obj.cont_items.forEach(elem => s+= `<div style="width:20%" class="col-lg-6 col-sm-12"><div class="feature-wrap" ><div class="media"><div class="align-self-center mr-4"><div class="icon-wrap"><i class="ion ion-cube"></i></div></div><div class="media-body"><a target="_blank" href="${elem.link}">${elem.name}</a></div></div></div ></div >`);
     document.getElementById("cont_list").innerHTML = `<div class="col-12"><div class="section-header" ><div class="sec-icon"><i class="ion ion-android-settings"></i></div><div class="sec-title">Social Media</div></div ></div >${s}`;
   });
 
